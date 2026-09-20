@@ -317,6 +317,7 @@ fn er_css_honors_mermaid_11_15_theme_options() {
             r#"#er .marker{fill:none!important;stroke:#202020!important;stroke-width:1;}"#
         )
     );
+    assert!(css.contains(r#"#er .marker path{fill:none!important;}"#));
 }
 
 #[test]

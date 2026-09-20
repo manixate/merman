@@ -726,8 +726,8 @@ where
     // Mermaid duplicates `.marker` (base rule earlier sets fill/stroke from the line color).
     let _ = write!(
         &mut out,
-        r#"#{} .marker{{fill:none!important;stroke:{}!important;stroke-width:1;}}"#,
-        id, line_color
+        r#"#{} .marker{{fill:none!important;stroke:{}!important;stroke-width:1;}}#{} .marker path{{fill:none!important;}}"#,
+        id, line_color, id
     );
     let _ = write!(
         &mut out,
